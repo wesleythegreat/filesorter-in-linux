@@ -49,3 +49,4 @@ for files in names:
 
     if ".bak" in files and not os.path.exists(path+'documents'+files):
         shutil.move(path+files, path+'documents/'+files)
+# change the file directory "path"

@@ -3,8 +3,8 @@ import os
 import shutil
 path = "/home/wesley/Diskdrive/Downloads/"
 names = os.listdir(path)
-folder_name = ['image','text','archive','pdf','docx','ppt','pythonfiles','jar','documents']
-for x in range(0,9):
+folder_name = ['image','text','archive','pdf','docx','ppt','pythonfiles','jar','documents','iso','torrent']
+for x in range(0,11):
     if not os.path. exists(path+folder_name[x]):
         os.makedirs(path+folder_name[x])
 for files in names:
@@ -49,4 +49,16 @@ for files in names:
 
     if ".bak" in files and not os.path.exists(path+'documents'+files):
         shutil.move(path+files, path+'documents/'+files)
-# change the file directory "path"
+
+    if ".svg" in files and not os.path.exists(path+'image'+files):
+        shutil.move(path+files, path+'image/'+files)
+
+    if ".iso" in files and not os.path.exists(path+'iso'+files):
+        shutil.move(path+files, path+'iso/'+files)
+
+    if ".png" in files and not os.path.exists(path+'image'+files):
+        shutil.move(path+files, path+'image/'+files)
+
+    if ".torrent" in files and not os.path.exists(path+'torrent'+files):
+        shutil.move(path+files, path+'torrent/'+files)
+print ("Done")

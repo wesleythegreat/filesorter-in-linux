@@ -98,4 +98,7 @@ for files in names:
     if ".tar" in files and not os.path.exists(path + 'archive' + files):
         shutil.move(path + files, path + 'archive/' + files)
 
+    if ".zst" in files and not os.path.exists(path + 'archive' + files):
+        shutil.move(path + files, path + 'archive/' + files)
+
 print ("Done")

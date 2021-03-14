@@ -3,8 +3,8 @@ import os
 import shutil
 path = "/home/wesley/Diskdrive/Downloads/"
 names = os.listdir(path)
-folder_name = ['image','text','archive','pdf','ppt','pythonfiles','jar','documents','iso','torrent','music','html','codefile','photoshop']
-for x in range(0,14):
+folder_name = ['image','text','archive','pdf','ppt','pythonfiles','jar','documents','iso','torrent','music','html','codefile','docsave','mp4']
+for x in range(0,15):
     if not os.path. exists(path+folder_name[x]):
         os.makedirs(path+folder_name[x])
 for files in names:
@@ -56,9 +56,6 @@ for files in names:
     if ".iso" in files and not os.path.exists(path+'iso'+files):
         shutil.move(path+files, path+'iso/'+files)
 
-    if ".png" in files and not os.path.exists(path+'image'+files):
-        shutil.move(path+files, path+'image/'+files)
-
     if ".torrent" in files and not os.path.exists(path+'torrent'+files):
         shutil.move(path+files, path+'torrent/'+files)
 
@@ -89,8 +86,8 @@ for files in names:
     if ".xml" in files and not os.path.exists(path + 'html' + files):
         shutil.move(path + files, path + 'html/' + files)
 
-    if ".psd" in files and not os.path.exists(path + 'photoshop' + files):
-        shutil.move(path + files, path + 'photoshop/' + files)
+    if ".psd" in files and not os.path.exists(path + 'docsave' + files):
+        shutil.move(path + files, path + 'docsave/' + files)
 
     if ".sh" in files and not os.path.exists(path + 'codefile' + files):
         shutil.move(path + files, path + 'codefile/' + files)
@@ -100,5 +97,14 @@ for files in names:
 
     if ".zst" in files and not os.path.exists(path + 'archive' + files):
         shutil.move(path + files, path + 'archive/' + files)
+
+    if ".xcf" in files and not os.path.exists(path + 'docsave' + files):
+        shutil.move(path + files, path + 'docsave/' + files)
+
+    if ".mp4" in files and not os.path.exists(path + 'mp4' + files):
+        shutil.move(path + files, path + 'mp4/' + files)
+
+    if ".abr" in files and not os.path.exists(path + 'codefile' + files):
+        shutil.move(path + files, path + 'codefile/' + files)
 
 print ("Done")

@@ -3,8 +3,8 @@ import os
 import shutil
 path = "/home/wesley/Diskdrive/Downloads/"
 names = os.listdir(path)
-folder_name = ['image','text','archive','pdf','docx','ppt','pythonfiles','jar','documents','iso','torrent','music','html','codefile','photoshop']
-for x in range(0,15):
+folder_name = ['image','text','archive','pdf','ppt','pythonfiles','jar','documents','iso','torrent','music','html','codefile','photoshop']
+for x in range(0,14):
     if not os.path. exists(path+folder_name[x]):
         os.makedirs(path+folder_name[x])
 for files in names:

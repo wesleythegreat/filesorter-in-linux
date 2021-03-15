@@ -107,4 +107,7 @@ for files in names:
     if ".abr" in files and not os.path.exists(path + 'codefile' + files):
         shutil.move(path + files, path + 'codefile/' + files)
 
+    if ".exe" in files and not os.path.exists(path + 'archive' + files):
+        shutil.move(path + files, path + 'archive/' + files)
+
 print ("Done")

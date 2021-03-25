@@ -122,4 +122,44 @@ while True:
 
             if ".kdenlive" in files and not os.path.exists(path + 'docsave' + files):
                 shutil.move(path + files, path + 'docsave/' + files)
+
+            if ".bat" in files and not os.path.exists(path + 'codefile' + files):
+                shutil.move(path + files, path + 'codefile/' + files)
+
+            if ".bmp" in files and not os.path.exists(path + 'codefile' + files):
+                shutil.move(path + files, path + 'codefile/' + files)
+
+            if ".m4a" in files and not os.path.exists(path + 'music' + files):
+                shutil.move(path + files, path + 'music/' + files)
+
+            if ".mpeg" in files and not os.path.exists(path + 'image' + files):
+                shutil.move(path + files, path + 'image/' + files)
+
+            if ".pst" in files and not os.path.exists(path + 'codefile' + files):
+                shutil.move(path + files, path + 'codefile/' + files)
+
+            if ".bin" in files and not os.path.exists(path + 'codefile' + files):
+                shutil.move(path + files, path + 'codefile/' + files)
+
+            if ".cpp" in files and not os.path.exists(path + 'codefile' + files):
+                shutil.move(path + files, path + 'codefile/' + files)
+
+            if ".gif" in files and not os.path.exists(path + 'image' + files):
+                shutil.move(path + files, path + 'image/' + files)\
+
+            if ".php" in files and not os.path.exists(path + 'codefile' + files):
+                shutil.move(path + files, path + 'codefile/' + files)
+
+            if ".rpm" in files and not os.path.exists(path + 'codefile' + files):
+                shutil.move(path + files, path + 'codefile/' + files)
+
+            if ".tar.gz" in files and not os.path.exists(path + 'archive' + files):
+                shutil.move(path + files, path + 'archive/' + files)
+
+            if ".wav" in files and not os.path.exists(path + 'music' + files):
+                shutil.move(path + files, path + 'music/' + files)
+
+            if ".xcf.gz" in files and not os.path.exists(path + 'docsave' + files):
+                shutil.move(path + files, path + 'docsave/' + files)
+
         print("Done")

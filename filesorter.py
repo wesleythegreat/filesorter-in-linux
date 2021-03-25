@@ -145,7 +145,7 @@ while True:
                 shutil.move(path + files, path + 'codefile/' + files)
 
             if ".gif" in files and not os.path.exists(path + 'image' + files):
-                shutil.move(path + files, path + 'image/' + files)\
+                shutil.move(path + files, path + 'image/' + files)
 
             if ".php" in files and not os.path.exists(path + 'codefile' + files):
                 shutil.move(path + files, path + 'codefile/' + files)

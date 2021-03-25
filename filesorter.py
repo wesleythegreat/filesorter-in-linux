@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import os
 import shutil
-path = "/home/wesley/diskdrive/Downloads/"
+path = "/home/wesley/Diskdrive/Downloads/"
 names = os.listdir(path)
 folder_name = ['image','text','archive','pdf','ppt','pythonfiles','jar','documents','iso','torrent','music','html','codefile','docsave','mp4']
 for x in range(0,15):
@@ -110,4 +110,9 @@ for files in names:
     if ".exe" in files and not os.path.exists(path + 'archive' + files):
         shutil.move(path + files, path + 'archive/' + files)
 
+    if ".7z" in files and not os.path.exists(path + 'archive' + files):
+        shutil.move(path + files, path + 'archive/' + files)
+
+    if ".AppImage" in files and not os.path.exists(path + 'archive' + files):
+        shutil.move(path + files, path + 'archive/' + files)
 print ("Done")

@@ -115,4 +115,7 @@ for files in names:
 
     if ".AppImage" in files and not os.path.exists(path + 'archive' + files):
         shutil.move(path + files, path + 'archive/' + files)
+
+    if ".kdenlive" in files and not os.path.exists(path + 'docsave' + files):
+        shutil.move(path + files, path + 'docsave/' + files)
 print ("Done")

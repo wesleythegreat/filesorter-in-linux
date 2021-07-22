@@ -7,7 +7,7 @@ while True:
         path = "/home/wesley/Diskdrive/Downloads/"
         names = os.listdir(path)
         folder_name = ['image', 'text', 'archive', 'pdf', 'ppt', 'pythonfiles', 'jar', 'documents', 'iso', 'torrent',
-                       'music', 'html', 'codefile', 'docsave', 'mp4']
+                       'music', 'html', 'codefile', 'docsave', 'video']
         for x in range(0, 15):
             if not os.path.exists(path + folder_name[x]):
                 os.makedirs(path + folder_name[x])
@@ -105,8 +105,8 @@ while True:
             if ".xcf" in files and not os.path.exists(path + 'docsave' + files):
                 shutil.move(path + files, path + 'docsave/' + files)
 
-            if ".mp4" in files and not os.path.exists(path + 'mp4' + files):
-                shutil.move(path + files, path + 'mp4/' + files)
+            if ".mp4" in files and not os.path.exists(path + 'video' + files):
+                shutil.move(path + files, path + 'video/' + files)
 
             if ".abr" in files and not os.path.exists(path + 'codefile' + files):
                 shutil.move(path + files, path + 'codefile/' + files)
@@ -161,5 +161,6 @@ while True:
 
             if ".xcf.gz" in files and not os.path.exists(path + 'docsave' + files):
                 shutil.move(path + files, path + 'docsave/' + files)
-
+            if ".mkv" in files and not os.path.exists(path + 'video' + files):
+                shutil.move(path +files, path + 'video/' + files)
         print("Done")
